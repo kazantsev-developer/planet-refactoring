@@ -1,57 +1,157 @@
 @page {
-  size: A4;
-  margin: 2cm 2cm 2cm 2.5cm;
-  @bottom-right {
+  size: A5;
+  margin: 18mm 15mm 20mm 20mm;
+  @bottom-center {
     content: counter(page);
     font-family:
       -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-    font-size: 10pt;
-    color: #666;
+    font-size: 9pt;
+    color: #777;
   }
 }
 
+@page :left {
+  margin: 18mm 20mm 20mm 15mm;
+}
+
+@page :right {
+  margin: 18mm 15mm 20mm 20mm;
+}
+
 @page :first {
-  margin: 0;
-  @bottom-right {
+  margin: 15mm;
+  @bottom-center {
     content: none;
   }
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Georgia", serif;
-  font-size: 11.5pt;
-  line-height: 1.55;
-  color: #1a1a1a;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 10.5pt;
+  line-height: 1.52;
+  color: #1c1c1c;
+  text-align: justify;
+  hyphens: none;
+}
+
+nav#TOC {
+  page-break-after: always;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+
+nav#TOC h2,
+nav#TOC > p {
+  font-size: 16pt;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1.5px solid #222;
+  padding-bottom: 4px;
+}
+
+nav#TOC ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 8.5pt;
+  line-height: 1.32;
+}
+
+nav#TOC > ul > li {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+nav#TOC > ul > li > ul {
+  padding-left: 12px;
+  font-weight: normal;
+  margin-top: 2px;
+}
+
+nav#TOC a {
+  color: #1c1c1c;
+  text-decoration: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto 1.5em auto;
+  margin: 10px auto 16px auto;
+  border-radius: 4px;
 }
 
 h1 {
   page-break-before: always;
+  page-break-after: avoid;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  font-size: 20pt;
+  font-size: 17pt;
+  line-height: 1.25;
+  text-align: left;
   margin-top: 0;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 8px;
+  margin-bottom: 14px;
+  border-bottom: 1.5px solid #222;
+  padding-bottom: 6px;
+  color: #000;
 }
 
+/* Титульный заголовок книги */
 h1:first-of-type {
-  page-break-before: avoid;
+  font-size: 19pt;
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 8px;
+}
+
+h2#информация {
+  page-break-before: always;
+  margin-top: 0;
 }
 
 h2 {
+  page-break-after: avoid;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  font-size: 14pt;
-  margin-top: 1.5em;
+  font-size: 12.5pt;
+  line-height: 1.3;
+  text-align: left;
+  margin-top: 18px;
+  margin-bottom: 8px;
   color: #111;
 }
 
+h3 {
+  page-break-after: avoid;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-size: 11pt;
+  text-align: left;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+ul,
+ol {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 16px 0;
+}
+
 a {
-  color: #0366d6;
+  color: #0b57d0;
   text-decoration: none;
 }
